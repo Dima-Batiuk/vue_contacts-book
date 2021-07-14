@@ -1,5 +1,14 @@
 # vue_contacts-book
+Сделать телефонную книгу на vue.js
 
+Содержание и возможности следующие:
+Список контактов и их номеров (Может быть много номеров у одного контакта)  
+Возможность добавить\удалить новый контакт.
+Возможность добавить\удалить номер телефона для контакта.
+
+Контакты и номера не обязательно должны быть уникальны. Но нужно валидировать данные.
+
+Верстка и back-end в данном случае не важна, используйте то, что вам больше нравится.
 ## Project setup
 ```
 npm install
@@ -20,5 +29,5 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Demo-link
+[Demo-link](https://dima-batiuk.github.io/vue_contacts-book/).
