@@ -33,10 +33,10 @@
         <div class="buttons">
           <button
             @click.prevent="viewDetails(contact.id)"
-            class="contact__item--remove button"
+            class="contact__item--details button"
           ></button>
           <button
-            class="contact__item--details button"
+            class="contact__item--remove button"
             @click.prevent="removeUser(contact.id)"
           ></button>
         </div>
@@ -119,10 +119,7 @@ export default {
       background-color: grey;
       box-shadow: 2px 2px 4px;
     }
-    &:active {
-      background-color: black;
-      color: white;
-    }
+
   }
 }
 
@@ -172,61 +169,44 @@ h2 {
   border-radius: 50%;
   transition: all 0.3s ease;
   &:after {
-    width: 100%;
-    height: 100%;
+    content: "";
+    width: 18px;
+    height: 21px;
     position: absolute;
-    color: black;
     top: 50%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
 .contact__item--remove {
 
   &:after {
-    content: "\26AC \26AC \26AC";
-    font-weight: 600;
-    font-size: 13px;
+    width: 15px;
+    height: 18px;
+    background-color: inherit;
+    background-image: url("../svg/close.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   &:hover {
     background-color: gray;
-    &:after {
-      color: black;
-    }
   }
 
-  &:focus {
-    background-color: black;
-    &:after {
-      color: white;
-    }
-  }
 }
 
 .contact__item--details {
 
   &:after {
-    content: "\2716";
-    font-weight: 800;
-    font-size: 14px;
+    background-image: url("../svg/more.svg");
+    background-position: center;
+    object-fit: cover;
   }
 
   &:hover {
     background-color: gray;
-    &:after {
-      color: black;
-    }
-  }
-
-  &:focus {
-    background-color: black;
-    &:after {
-      color: white;
-    }
   }
 }
 

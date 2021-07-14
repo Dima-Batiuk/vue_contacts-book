@@ -169,25 +169,23 @@ h3 {
   transition: all 0.3s ease;
 
   &:after {
-    width: 100%;
-    height: 100%;
-    content: "\2716";
-    font-weight: 800;
-    font-size: 14px;
     position: absolute;
-    color: black;
+    content: "";
+    width: 15px;
+    height: 18px;
+    background-color: inherit;
+    background-image: url("../svg/close.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     top: 50%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease;
   }
 
   &:hover {
-    background-color: black;
-    &:after {
-      color: white;
-    }
+    background-color: grey;
   }
 }
 
